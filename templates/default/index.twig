@@ -22,10 +22,10 @@
 <div class="grid-container">
   <div class="grid-x grid-padding-x grid-padding-y">
     {% for project in projects %}
-      <div class="small-12 medium-6 cell text-center">
+      <div class="small-12 medium-6 cell">
         <a href="{{ project.url }}">
           {% set image = project.image.one() %}
-          <div class="margin-bottom-1 image--square" data-interchange="{% include "_includes/images/contained/16-9/interchange-img-small-12-medium-12" %}">
+          <div class="margin-bottom-1 image--3-4" data-interchange="{% include "_includes/images/contained/5-7/interchange-img-small-12-medium-12" %}">
             <div class="content grid-y align-center">
               <div class="shrink cell padding-1">
       
@@ -33,7 +33,7 @@
             </div>
           </div>
       
-          <div>{{ project.title }}</div>
+          <h2 class="h4">{{ project.title }}</h2>
 
       
         </a>
