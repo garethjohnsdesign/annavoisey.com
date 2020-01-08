@@ -8,7 +8,7 @@
 <section class="grid-container">
 <div class="grid-x grid-padding-y align-center project__meta">
   <div class="small-8 medium-7 large-7 cell text-center">
-    <div class="h5">{{ entry.client }} — {{ entry.title }}</div>
+    <h1 class="h3">{{ entry.client }} — {{ entry.project }}</h1>
   </div>
 </div>
 </section>
@@ -58,11 +58,13 @@
 
 <div class="grid-container padding-bottom-2">
 
+{#
   <div class="grid-x grid-padding-y align-center">
     <div class="small-12 medium-8 cell text-center">
       <h5>Similar</h5>
     </div>
   </div>
+#}
 
   <div class="grid-x grid-padding-x grid-padding-y">
     {% for project in projects %}
@@ -76,7 +78,7 @@
             </div>
           </div>
       
-          <div>{{ project.client }} — {{ project.title }}</div>
+          <div>{{ project.client }} — {{ project.project }}</div>
       
         </a>
       </div>

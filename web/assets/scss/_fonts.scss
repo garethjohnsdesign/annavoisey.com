@@ -44,6 +44,15 @@
 }
 
 @font-face {
+  font-family: 'Louize Display Italic';
+  src: 
+  url('../fonts/louize-display-italic.woff2') format('woff2'), 
+  url('../fonts/louize-display-italic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Marr Sans';
   src: 
   url('../fonts/marr-sans-regular.woff2') format('woff2'), 

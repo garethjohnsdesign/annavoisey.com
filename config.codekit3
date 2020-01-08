@@ -1050,6 +1050,22 @@
 		"oAP": "/web/assets/fonts/gt-walshiem-regular.woff2",
 		"oF": 0
 		},
+	"/web/assets/fonts/louize-display-italic.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/web/assets/fonts/louize-display-italic.woff",
+		"oF": 0
+		},
+	"/web/assets/fonts/louize-display-italic.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/web/assets/fonts/louize-display-italic.woff2",
+		"oF": 0
+		},
 	"/web/assets/fonts/louize-display.woff": {
 		"cB": 0,
 		"ft": 8192,
