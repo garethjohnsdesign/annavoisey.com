@@ -290,14 +290,6 @@
 		"oAP": "/templates/default/_includes/blocks/layout.twig",
 		"oF": 0
 		},
-	"/templates/default/_includes/global/act.twig": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/templates/default/_includes/global/act.twig",
-		"oF": 0
-		},
 	"/templates/default/_includes/global/analytics.twig": {
 		"cB": 0,
 		"ft": 8192,
@@ -312,14 +304,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/templates/default/_includes/global/contact.twig",
-		"oF": 0
-		},
-	"/templates/default/_includes/global/cta.twig": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/templates/default/_includes/global/cta.twig",
 		"oF": 0
 		},
 	"/templates/default/_includes/global/footer.twig": {
@@ -698,36 +682,12 @@
 		"oAP": "/templates/default/_layouts/site.twig",
 		"oF": 0
 		},
-	"/templates/default/about/index.twig": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/templates/default/about/index.twig",
-		"oF": 0
-		},
-	"/templates/default/contact/index.twig": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/templates/default/contact/index.twig",
-		"oF": 0
-		},
 	"/templates/default/error.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/templates/default/error.twig",
-		"oF": 0
-		},
-	"/templates/default/holding/index.twig": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/templates/default/holding/index.twig",
 		"oF": 0
 		},
 	"/templates/default/index.twig": {
@@ -744,14 +704,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/templates/default/info/index.twig",
-		"oF": 0
-		},
-	"/templates/default/location/index.twig": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/templates/default/location/index.twig",
 		"oF": 0
 		},
 	"/templates/default/offline.twig": {
@@ -1048,6 +1000,22 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/web/assets/fonts/gt-walshiem-regular.woff2",
+		"oF": 0
+		},
+	"/web/assets/fonts/louize-display-italic.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/web/assets/fonts/louize-display-italic.woff",
+		"oF": 0
+		},
+	"/web/assets/fonts/louize-display-italic.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/web/assets/fonts/louize-display-italic.woff2",
 		"oF": 0
 		},
 	"/web/assets/fonts/louize-display.woff": {
