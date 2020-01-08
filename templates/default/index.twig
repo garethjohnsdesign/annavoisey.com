@@ -1,0 +1,47 @@
+{% set bodyClass = 'home' %}
+
+{% extends "default/_layouts/site" %}
+
+{% block main %}
+
+<!-- Layout -->
+{#
+<div class="grid-x grid-padding-y">
+  <div class="small-12 cell">
+    {% include "_includes/blocks/layout" %}    
+  </div>
+</div>
+#}
+<!-- End Layout -->
+
+<!-- Projects -->
+{% set projects = craft.entries
+.section('projects')
+.all() %}
+
+<div class="grid-container">
+  <div class="grid-x grid-padding-x grid-padding-y">
+    {% for project in projects %}
+      <div class="small-12 medium-6 cell text-center">
+        <a href="{{ project.url }}">
+          {% set image = project.image.one() %}
+          <div class="margin-bottom-1 image--square" data-interchange="{% include "_includes/images/contained/16-9/interchange-img-small-12-medium-12" %}">
+            <div class="content grid-y align-center">
+              <div class="shrink cell padding-1">
+      
+              </div>
+            </div>
+          </div>
+      
+          <div>{{ project.title }}</div>
+
+      
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+<!-- End Projects -->
+
+
+{% endblock %}
