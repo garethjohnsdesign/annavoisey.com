@@ -80,7 +80,7 @@
     
     {% case "images" %}
     <div class="grid-x grid-padding-x grid-padding-y">
-      {% for image in matrixBlock.images %}
+      {% for image in matrixBlock.images.all() %}
        {% if image.aspectRatio == "landscape" %}
        <div class="small-12 medium-12 cell">
         <div class="image--16-9" data-interchange="{% include "_includes/images/contained/16-9/interchange-img-small-12-medium-12" %}"></div>
