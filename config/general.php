@@ -81,7 +81,7 @@ return [
     'production' => [
 
         'siteUrl' => [
-            'default' => 'https://annavoisey-prod.frb.io',
+            'default' => 'https://www.annavoisey.com',
         ],
 
         'devMode' => false,
