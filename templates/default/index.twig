@@ -22,7 +22,7 @@
 <div class="grid-container">
   <div class="grid-x grid-padding-x grid-padding-y">
     {% for project in projects %}
-      <div class="small-12 medium-6 cell">
+      <div class="small-12 medium-4 cell">
         <a href="{{ project.url }}">
           {% set image = project.image.one() %}
           <div class="margin-bottom-1 image--3-4" data-interchange="{% include "_includes/images/contained/5-7/interchange-img-small-12-medium-12" %}">
