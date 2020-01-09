@@ -5,24 +5,95 @@
 {% block main %}
 
 <!-- Layout -->
-{#
-<div class="grid-x grid-padding-y">
-  <div class="small-12 cell">
-    {% include "_includes/blocks/layout" %}    
-  </div>
+<div class="grid-x small-up-1 medium-up-2 align-bottom">
+  
+  {% set projectsQuery = entry.projects.all() %}
+
+  {% for project in projectsQuery %}
+    <div class="cell">
+
+
+      <div class="grid-x grid-padding-y align-{{project.alignHorizontal.value}}">
+        <div class="cell small-12 {% if project.size.value == 'small' %}medium-6{% elseif project.size.value == 'medium' %}medium-8{% elseif project.size.value == 'large' %}medium-10{% elseif project.size.value == 'full' %}medium-12{% endif %}">
+
+
+        {% set item = project.project.first() %}
+        <a href="{{ item.url }}">
+          {% set image = item.image.one() %}
+          <div class="margin-bottom-1 image--3-4" data-interchange="{% include "_includes/images/contained/5-7/interchange-img-small-12-medium-12" %}"></div>
+          <h2 class="h3 margin-left-1">{{item.title}}</h2>
+        </a>
+
+        </div>
+      </div>
+
+    </div>
+  {% endfor %}
+
 </div>
-#}
 <!-- End Layout -->
 
 <!-- Projects -->
+{#
 {% set projects = craft.entries
 .section('projects')
 .all() %}
+#}
 
-<div class="grid-container">
-  <div class="grid-x grid-padding-x grid-padding-y">
+{#
+{% for entry in projects|batch(5) %}
+    <!-- Set position for the bigger block -->
+    {% set bigBatchNr = 2 %}
+    <!-- Change position for the bigger block if the batch loop is even -->
+    {% if loop.index is even %}
+        {% set bigBatchNr = 1 %}
+    {% endif %}
+
+    <div class="grid-x grid-padding-x grid-padding-y align-center">
+        {% for project in entry %}
+            {% if loop.index == bigBatchNr %}
+                <div class="small-12 medium-5 cell">
+                  <a href="{{ project.url }}">
+                    {% set image = project.image.one() %}
+                    <div class="margin-bottom-1 image--3-4" data-interchange="{% include "_includes/images/contained/5-7/interchange-img-small-12-medium-12" %}">
+                      <div class="content grid-y align-center">
+                        <div class="shrink cell padding-1">
+                
+                        </div>
+                      </div>
+                    </div>
+                
+                    <h2 class="h4">{{ project.client }} — <span class="serif-italic">{{ project.project }}</span></h2>
+                  </a>
+                </div>
+            {% else %}
+                <div class="small-12 medium-4 cell">
+                  <a href="{{ project.url }}">
+                  {% set image = project.image.one() %}
+                  <div class="margin-bottom-1 image--3-4" data-interchange="{% include "_includes/images/contained/5-7/interchange-img-small-12-medium-12" %}">
+                    <div class="content grid-y align-center">
+                      <div class="shrink cell padding-1">
+              
+                      </div>
+                    </div>
+                  </div>
+              
+                  <h2 class="h4">{{ project.client }} — <span class="serif-italic">{{ project.project }}</span></h2>
+                </a>
+                </div>
+            {% endif %}
+        {% endfor %}            
+    </div>
+{% endfor %}
+#}
+
+
+{#
+  <div class="grid-x">
+
     {% for project in projects %}
       <div class="small-12 medium-4 cell">
+
         <a href="{{ project.url }}">
           {% set image = project.image.one() %}
           <div class="margin-bottom-1 image--3-4" data-interchange="{% include "_includes/images/contained/5-7/interchange-img-small-12-medium-12" %}">
@@ -34,13 +105,14 @@
           </div>
       
           <h2 class="h4">{{ project.client }} — <span class="serif-italic">{{ project.project }}</span></h2>
-
-      
         </a>
+
       </div>
     {% endfor %}
+
   </div>
-</div>
+#}
+
 <!-- End Projects -->
 
 
