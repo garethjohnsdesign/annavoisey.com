@@ -19,7 +19,7 @@
     "rss": "https://craftcms.com/changelog.rss"
   },
   "require": {
-    "craftcms/cms": "^3.4.0-beta.1",
+    "craftcms/cms": "3.4.0-RC1.1",
     "vlucas/phpdotenv": "^2.4.0",
     "craftcms/ckeditor": "1.0.0-beta.2",
     "craftcms/contact-form": "2.2.6",
@@ -31,7 +31,7 @@
     "fortrabbit/craft-copy": "1.0.0-RC9",
     "verbb/field-manager": "2.1.1",
     "carlcs/craft-deleteentryversions": "2.0.0",
-    "ether/simplemap": "3.7.6",
+    "ether/simplemap": "3.7.7",
     "rias/craft-position-fieldtype": "1.0.14"
   },
   "autoload": {

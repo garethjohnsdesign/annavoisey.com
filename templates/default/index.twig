@@ -17,11 +17,11 @@
         <div class="cell small-12 {% if project.size.value == 'small' %}medium-6{% elseif project.size.value == 'medium' %}medium-8{% elseif project.size.value == 'large' %}medium-10{% elseif project.size.value == 'full' %}medium-12{% endif %}">
 
 
-        {% set item = project.project.first() %}
+        {% set item = project.project.one() %}
         <a href="{{ item.url }}">
           {% set image = item.image.one() %}
           <div class="margin-bottom-1 image--3-4" data-interchange="{% include "_includes/images/contained/5-7/interchange-img-small-12-medium-12" %}"></div>
-          <h2 class="h3 margin-left-1">{{item.title}}</h2>
+          <h2 class="h3 margin-left-1" data-aos="fade-in">{{item.title}}</h2>
         </a>
 
         </div>
