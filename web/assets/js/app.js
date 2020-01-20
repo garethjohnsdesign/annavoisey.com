@@ -3,7 +3,12 @@
 
 import $ from "jquery";
 import Foundation from 'foundation-sites';
+import "lightGallery";
+import "lg-fullscreen";
+import "lg-video";
+import "lg-autoplay";
 import AOS from 'aos';
+import Cookies from 'js-cookie'
 
 
 // 2. Foundation
@@ -16,17 +21,24 @@ Foundation.Interchange.SPECIAL_QUERIES['xxlarge-retina'] = 'only screen and (min
   
 $(document).foundation();
 
-// 1. Loader
-// ---------------
 
-if ($("body").hasClass("home")) {
-  $( ".loader" ).removeClass( "hide" );
-  $( ".loader" ).addClass( "loading" );
-  setTimeout( function() {
-    $( ".loader" ).addClass( "loaded" );
-  }, 2500 
-  );
-}
+// 1. Loading
+// ----------
+
+$(document).ready(function() {
+  if (!Cookies.get('loading')) {
+
+  $(function() {
+    $(".loader").removeClass("hide");
+    $(".loader").addClass("loading");
+    setTimeout(function(){
+     $(".loader").addClass("loaded");
+     Cookies.set('loading', 'true');
+    }, 2500);
+  });
+
+  }
+});
 
 // 4. Viewport Height Fix
 // ----------------------
@@ -44,20 +56,6 @@ window.addEventListener('resize', () => {
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
 
-
-// 1. Loader
-// ---------------
-
-/*
-if ($("body").hasClass("home")) {
-  $( ".loader" ).removeClass( "hide" );
-  $( ".loader" ).addClass( "loading" );
-  setTimeout( function() {
-    $( ".loader" ).addClass( "loaded" );
-  }, 2500 
-  );
-}
-*/
 
 // 4. Animate on Scroll
 // --------------------
