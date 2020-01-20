@@ -3,14 +3,20 @@
 
 import $ from "jquery";
 import Foundation from 'foundation-sites';
+import Cookies from 'js-cookie'
+import AOS from 'aos';
+import {
+  TimelineMax,
+  CSSPlugin,
+  ScrollToPlugin,
+  Draggable
+} from "gsap/all";
+import Swup from 'swup';
 import "lightGallery";
 import "lg-fullscreen";
 import "lg-video";
-import "lg-autoplay";
-import AOS from 'aos';
-import Cookies from 'js-cookie'
-import Swup from 'swup';
 import SwupBodyClassPlugin from "@swup/body-class-plugin";
+
 
 
 // 2. Foundation
@@ -24,7 +30,7 @@ Foundation.Interchange.SPECIAL_QUERIES['xxlarge-retina'] = 'only screen and (min
 $(document).foundation();
 
 
-// 1. Loading
+// 3. Loading
 // ----------
 
 $(document).ready(function() {
@@ -59,7 +65,7 @@ window.addEventListener('resize', () => {
 });
 
 
-// 4. Animate on Scroll
+// 5. Animate on Scroll
 // --------------------
 
 $(function() {
@@ -74,7 +80,7 @@ $(function() {
 window.addEventListener('load', AOS.refresh);
 });
 
-// 4. Lightgallery
+// 6. Lightgallery
 // ---------------
 
 $('#testinglayout').lightGallery({
