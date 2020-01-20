@@ -17,7 +17,8 @@ import "lg-fullscreen";
 import "lg-video";
 import SwupBodyClassPlugin from "@swup/body-class-plugin";
 
-
+$( document ).ready( function() {
+  function init() {
 
 // 2. Foundation
 // ----------
@@ -98,3 +99,20 @@ $('#testinglayout').lightGallery({
       controls: 0
   }
 });
+
+// 2. Page Transitions
+// -------------------
+const options = {
+  animationSelector: '[class*="swup-transition-"]',
+  containers: [ '#swup-body', '#swup-header' ],
+  plugins: [ new SwupBodyClassPlugin() ]
+};
+const swup = new Swup( options );
+
+// 2. Run Once
+// -----------
+init();
+
+swup.on( 'contentReplaced', init );
+
+} );
