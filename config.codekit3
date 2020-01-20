@@ -157,6 +157,17 @@
 		"oAP": "/build/node_modules",
 		"oF": 0
 		},
+	"/node_modules/@swup/body-class-plugin/lib/index.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/node_modules/@swup/body-class-plugin/lib/index-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/node_modules/aos/dist/aos.js": {
 		"bF": 0,
 		"ft": 64,
@@ -245,13 +256,13 @@
 		"sC": 3,
 		"tS": 0
 		},
-	"/node_modules/ssr-window/dist/ssr-window.esm.js": {
+	"/node_modules/swup/lib/index.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/node_modules/ssr-window/dist/ssr-window.esm-min.js",
+		"oAP": "/node_modules/swup/lib/index-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0

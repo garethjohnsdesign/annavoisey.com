@@ -9,6 +9,8 @@ import "lg-video";
 import "lg-autoplay";
 import AOS from 'aos';
 import Cookies from 'js-cookie'
+import Swup from 'swup';
+import SwupBodyClassPlugin from "@swup/body-class-plugin";
 
 
 // 2. Foundation
@@ -89,4 +91,4 @@ $('#testinglayout').lightGallery({
       rel: 0,
       controls: 0
   }
-}); 
+});

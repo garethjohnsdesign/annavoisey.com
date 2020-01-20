@@ -30,8 +30,8 @@
 </section>
 <!-- End Credits -->
 
-
-<!-- Pagination -->
+<!-- Pagination Small -->
+<section class="show-for-small">
 {% set projectQuery = craft.entries
 .section('projects')
 .orderBy('RAND()')
@@ -62,7 +62,44 @@
     {% endfor %}
   </div>
 </div>
-<!-- End Pagination -->
+</section>
+<!-- End Pagination Medium -->
+
+
+<!-- Pagination Medium -->
+<section class="show-for-medium">
+{% set projectQuery = craft.entries
+.section('projects')
+.orderBy('RAND()')
+.id('not ' ~ entry.id)
+.limit(3) 
+%}
+
+{% set projects = projectQuery.all() %}
+
+<div class="grid-container padding-bottom-2">
+
+  <div class="grid-x grid-padding-x grid-padding-y">
+    {% for project in projects %}
+      <div class="small-12 medium-4 cell text-center">
+        <a href="{{ project.url }}">
+          {% set image = project.image.one() %}
+          <div class="margin-bottom-1 image--square" data-interchange="{% include "_includes/images/contained/1-1/interchange-img-small-12-medium-12" %}">
+            <div class="content grid-y align-center">
+              <div class="shrink cell padding-1">
+              </div>
+            </div>
+          </div>
+      
+          <div>{{ project.client }} — {{ project.project }}</div>
+      
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+</section>
+<!-- End Pagination Medium -->
 
 
 {% endblock %}
