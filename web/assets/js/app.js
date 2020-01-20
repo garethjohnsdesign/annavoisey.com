@@ -100,6 +100,8 @@ $('#testinglayout').lightGallery({
   }
 });
 
+}
+
 // 2. Page Transitions
 // -------------------
 const options = {
