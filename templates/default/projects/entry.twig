@@ -8,7 +8,7 @@
 <section class="grid-container">
 <div class="grid-x grid-padding-y align-center">
   <div class="small-12 cell text-center padding-bottom-0">
-    <h1 class="h2">{{ entry.client }} — {{ entry.project }}</h1>
+    <h1 class="h3">{{ entry.client }} — {{ entry.project }}</h1>
   </div>
 </div>
 </section>
@@ -19,6 +19,16 @@
 {% include "_includes/blocks/layout" %}
 </section>
 <!-- End Layout -->
+
+<!-- Credits -->
+<section class="grid-container">
+<div class="grid-x grid-padding-y align-center">
+  <div class="small-12 cell text-center padding-bottom-0">
+    {{ entry.credits }}
+  </div>
+</div>
+</section>
+<!-- End Credits -->
 
 
 <!-- Pagination -->
@@ -32,14 +42,6 @@
 {% set projects = projectQuery.all() %}
 
 <div class="grid-container padding-bottom-2">
-
-{#
-  <div class="grid-x grid-padding-y align-center">
-    <div class="small-12 medium-8 cell text-center">
-      <h5>Similar</h5>
-    </div>
-  </div>
-#}
 
   <div class="grid-x grid-padding-x grid-padding-y">
     {% for project in projects %}
