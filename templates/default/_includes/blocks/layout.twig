@@ -181,11 +181,12 @@
   
     
     {% case "video" %}
+
     <div class="grid-x grid-padding-y align-center" data-aos="fade-in">
-      <div class="small-12 medium-12 cell">
+      <div class="small-12 medium-8 cell">
 
       {% set image = matrixBlock.image.one() %}
-      <div class="image--panorama" {% if image %}data-interchange="{% include "_includes/images/contained/16-9/interchange-img-small-12-medium-12" %}"{% endif %}>
+      <div class="image--{{ image.aspectRatio.label | kebab }}" {% if image %}data-interchange="{% include "_includes/images/contained/16-9/interchange-img-small-12-medium-12" %}"{% endif %}>
         <div class="grid-y height-100 align-center content">
             <div class="shrink cell text-center text-lowercase padding-2">
               <a href="{{ matrixBlock.embed }}" class="h1 white videoelement">
