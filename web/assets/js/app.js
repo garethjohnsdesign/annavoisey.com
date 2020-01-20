@@ -71,3 +71,22 @@ $(function() {
 $(function() {
 window.addEventListener('load', AOS.refresh);
 });
+
+// 4. Lightgallery
+// ---------------
+
+$('#testinglayout').lightGallery({
+  selector: '.videoelement',
+  counter : false,
+  vimeoPlayerParams: {
+      byline : 0,
+      portrait : 0,
+      color : '272A67'
+  },
+  youtubePlayerParams: {
+      modestbranding: 1,
+      showinfo: 0,
+      rel: 0,
+      controls: 0
+  }
+}); 
