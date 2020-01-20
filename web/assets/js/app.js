@@ -5,12 +5,6 @@ import $ from "jquery";
 import Foundation from 'foundation-sites';
 import Cookies from 'js-cookie'
 import AOS from 'aos';
-import {
-  TimelineMax,
-  CSSPlugin,
-  ScrollToPlugin,
-  Draggable
-} from "gsap/all";
 import Swup from 'swup';
 import "lightGallery";
 import "lg-fullscreen";
@@ -109,6 +103,8 @@ const options = {
   containers: [ '#swup-body', '#swup-header' ],
   plugins: [ new SwupBodyClassPlugin() ]
 };
+
+
 const swup = new Swup( options );
 
 // 2. Run Once
