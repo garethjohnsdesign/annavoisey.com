@@ -11,6 +11,7 @@ import "lg-fullscreen";
 import "lg-video";
 import SwupBodyClassPlugin from "@swup/body-class-plugin";
 import SwupScrollPlugin from '@swup/scroll-plugin';
+import SwupGaPlugin from '@swup/ga-plugin';
 
 $( document ).ready( function() {
   function init() {
@@ -104,6 +105,7 @@ const options = {
   containers: [ '#swup-body', '#swup-header' ],
   plugins: [ 
     new SwupBodyClassPlugin(),
+    new SwupGaPlugin(),
     new SwupScrollPlugin({
         doScrollingRightAway: false,
         animateScroll: true,
