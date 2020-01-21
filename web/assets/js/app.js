@@ -45,6 +45,19 @@ $(document).ready(function() {
   }
 });
 
+// 3. Menu
+// -------------
+
+// 	Menu hover effect
+$(".navigation").hover(function(){
+  	$(".home__menu").removeClass("hide");
+    $(".home__title").addClass("hide"); 
+   	 }, function () {
+ 	 $(".home__menu").addClass("hide");
+ 	 $(".home__title").removeClass("hide");
+});
+  	
+
 // 4. Viewport Height Fix
 // ----------------------
 

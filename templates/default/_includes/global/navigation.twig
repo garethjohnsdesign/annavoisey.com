@@ -1,12 +1,30 @@
 <!-- Header -->
-<header class="grid-x grid-padding-x grid-padding-y align-center align-middle navigation" id="swup-header">
-
-
+<header class="grid-x grid-padding-x grid-padding-y align-center align-middle navigation show-for-small-only" id="swup-header">
   <div class="small-11 cell text-center text-uppercase padding-bottom-0">
     <a href={% if bodyClass == 'home' %}"/info"{% else %}"/"{% endif %}>
       <h1 class="font-wide margin-bottom-0">{{ seoTitle }}</h1>
     </a>
   </div>
-
 </header>
+<!-- End  Header -->
+
+<!-- Scroll Hide Header -->
+<div data-sticky-container id="top" class="hide-for-small-only">
+<header class="grid-x grid-padding-x grid-padding-y align-center align-middle navigation" id="swup-header" data-sticky data-options="marginTop:0;" style="width:100%" data-top-anchor="1">
+  <div class="small-11 cell text-center text-uppercase padding-bottom-0">
+
+
+  <div class="home__title">
+      <h1 class="font-wide margin-bottom-0">{{ seoTitle }}</h1>
+  </div>
+
+  <div class="home__menu hide">
+    <a href={% if bodyClass == 'home' %}"/info"{% else %}"/"{% endif %}>
+      <h1 class="font-wide margin-bottom-0">{% if bodyClass == 'info' %}Back{% elseif bodyClass == 'project' %}Back{% else %}About + Contact{% endif %}</h1>
+    </a>
+  </div>
+
+  </div>
+</header>
+</div>
 <!-- End  Header -->
