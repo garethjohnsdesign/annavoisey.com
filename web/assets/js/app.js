@@ -10,6 +10,7 @@ import "lightGallery";
 import "lg-fullscreen";
 import "lg-video";
 import SwupBodyClassPlugin from "@swup/body-class-plugin";
+import SwupScrollPlugin from '@swup/scroll-plugin';
 
 $( document ).ready( function() {
   function init() {
@@ -101,7 +102,15 @@ $('#testinglayout').lightGallery({
 const options = {
   animationSelector: '[class*="swup-transition-"]',
   containers: [ '#swup-body', '#swup-header' ],
-  plugins: [ new SwupBodyClassPlugin() ]
+  plugins: [ 
+    new SwupBodyClassPlugin(),
+    new SwupScrollPlugin({
+        doScrollingRightAway: false,
+        animateScroll: true,
+        scrollFriction: 0.3,
+        scrollAcceleration: 0.04
+    })
+  ]
 };
 
 
