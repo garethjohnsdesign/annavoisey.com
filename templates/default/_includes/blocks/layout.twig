@@ -81,18 +81,27 @@
     {% case "images" %}
     <div class="grid-x grid-padding-x grid-padding-y">
       {% for image in matrixBlock.images.all() %}
+
+       {% if image.extension == 'gif' %}
+       <div class="small-12 medium-6 cell">
+       <img src="{{image.url}}">
+       </div>
+       {% else %}
+
        {% if image.aspectRatio == "landscape" %}
        <div class="small-12 medium-12 cell">
         <div class="image--16-9" data-interchange="{% include "_includes/images/contained/16-9/interchange-img-small-12-medium-12" %}"></div>
        </div>
        {% elseif image.aspectRatio == "portrait" %}
        <div class="small-12 medium-6 cell">
-        <div class="image--5-7" data-interchange="{% include "_includes/images/contained/5-7/interchange-img-small-12-medium-12" %}"></div>
+       <div class="image--5-7" data-interchange="{% include "_includes/images/contained/5-7/interchange-img-small-12-medium-12" %}"></div>
        </div>
        {% else  %}
        <div class="small-12 medium-12 cell">
         <div class="image--16-9" data-interchange="{% include "_includes/images/contained/16-9/interchange-img-small-12-medium-12" %}"></div>
        </div>
+       {% endif %}
+
        {% endif %}
       {% endfor %}
     </div>
