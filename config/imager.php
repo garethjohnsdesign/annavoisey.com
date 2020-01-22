@@ -6,7 +6,7 @@ return [
 
       'transformer' => 'imgix',
 
-      'imagerUrl' => 'http://storage.googleapis.com/anna-voisey/',
+      'imagerUrl' => 'https://storage.googleapis.com/anna-voisey/',
 
       // Enables Imgix integration
       'imgixEnabled' => true,
